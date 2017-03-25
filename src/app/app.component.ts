@@ -25,7 +25,7 @@ export class AppComponent implements OnInit{
         console.log(err);
       })
     }else if(!this.oauth.isLoggedIn()){
-      this.router.navigate(["login"]);
+  //    this.router.navigate(["login"]);
     }
   }
 
