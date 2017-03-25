@@ -18,9 +18,11 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.scss",
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
       ],
-      "scripts": [],
+      "scripts": [
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
@@ -49,7 +51,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "prefixInterfaces": false,
     "inline": {
       "style": false,

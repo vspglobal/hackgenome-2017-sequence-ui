@@ -1,0 +1,12 @@
+@import '../../vars/vars';
+
+.loginCard{
+  background-color: $blue;
+  margin-top:100px;
+  border:2px solid $white;
+  color:$white
+}
+
+.loginCardHeader{
+  background-color: $green;
+}
