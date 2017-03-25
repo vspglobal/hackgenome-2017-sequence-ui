@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
   selector: 'app-redirect',
@@ -13,7 +13,7 @@ export class RedirectComponent implements OnInit {
   ngOnInit() {
     // subscribe to router event
     this.activatedRoute.params.subscribe((params: Params) => {
-      let userId = params['userId'];
+      let userId = params['code'];
       console.log(userId);
     });
   }
