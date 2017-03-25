@@ -11,11 +11,7 @@ export class RedirectComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    // subscribe to router event
-    this.activatedRoute.params.subscribe((params: Params) => {
-      let userId = params['code'];
-      console.log(userId);
-    });
+
   }
 
 
