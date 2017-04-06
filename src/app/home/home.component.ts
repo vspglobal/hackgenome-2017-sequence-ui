@@ -1,8 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {Message} from "./messages/message";
-import {Event} from "_debugger";
-import {Responder} from "./messages/responder";
-import {Symptoms} from "./messages/symptoms";
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -10,34 +6,11 @@ import {Symptoms} from "./messages/symptoms";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  private messages : Message[] = [];
-  private messageInput : string;
-
-  constructor() { }
-
-  ngOnInit() {
-    Responder.init();
+  ngOnInit(): void {
   }
 
-  public addMessage(str : string){
-    this.messages.push(new Message(str, 'me'));
-}
+  constructor() {
+  }
 
-public addReply(str : string){
-    this.messages.push(new Message(str, "bot"));
-}
-
-public checkEnter(event){
-    if(event.keyCode === 13){
-        this.addMessage(this.messageInput);
-        this.addReply(Responder.reply(this.messageInput));
-        this.messageInput = '';
-    }
-}
-
-public getSymptoms(){
-  return Symptoms.symptoms;
-}
 
 }

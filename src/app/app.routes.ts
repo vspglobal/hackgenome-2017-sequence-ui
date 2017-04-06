@@ -8,6 +8,6 @@ export const appRoutes: Routes = [
   { path: 'login',      component: LoginComponent },
   { path : 'redirect', component: RedirectComponent },
   { path: '**',
-    redirectTo: '/home',
+    redirectTo: '/login',
   },
 ];

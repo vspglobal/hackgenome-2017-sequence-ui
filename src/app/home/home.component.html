@@ -1,24 +1,4 @@
 <div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-6" style="margin-top:100px;"><div class="card text-center">
-        <div class="card-header">
-            Chatbot
-        </div>
-        <div class="card-block">
-            <div class="symptoms-container text-left">Current Symptoms:<span *ngFor="let sym of getSymptoms()">{{sym}}, </span></div>
-            <div class="message-container">
-                <div class="row no-gutters" *ngFor="let message of messages" [ngClass]="{'text-right meMessage':message.who === 'me', 'text-left botMessage': message.who !== 'me'}">
-                  <div class="col-12">
-                    {{message.who + ': ' + message.val}}
-                  </div>
-                </div>
-            </div>
-          <div class="message-input">
-              <input class="form-control" [(ngModel)]="messageInput" (keypress)="checkEnter($event);">
-          </div>
-        </div>
-    </div></div>
-
-  </div>
+  HOME WORKS
 
 </div>
