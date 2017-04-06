@@ -15,6 +15,8 @@ import {ToastOptions, ToastModule} from 'ng2-toastr';
 import {CustomOption} from "./app.toast";
 import {appRoutes} from "./app.routes";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ListComponent } from './home/list/list.component';
+import {ListDaoService} from "./home/list/list-dao.service";
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    RedirectComponent
+    RedirectComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ToastModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [OauthService, {provide: ToastOptions, useClass: CustomOption}],
+  providers: [OauthService, {provide: ToastOptions, useClass: CustomOption}, ListDaoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
