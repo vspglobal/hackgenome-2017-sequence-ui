@@ -1,14 +1,19 @@
 <div class="container-fluid">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center hidden-lg-up smallNavHolder">
+    <button class="form-control navBtn" style="margin-top:10px;" (click)="loginWithSequence()">Sequence</button>
+    <button class="form-control navBtn" style="margin-top:10px;"><img src="../../assets/gicon.png" class="icon"></button>
+    <button class="form-control navBtn" style="margin-top:10px;"><img src="../../assets/ficon.png" class="icon"></button>
+    </div>
+  <div class="row justify-content-center hidden-md-down">
     <div class="col-4">
       <div class="card text-center loginCard">
         <div class="card-header loginCardHeader">
           Login
         </div>
         <div class="card-block">
-          <button class="form-control" style="margin-top:10px; cursor: pointer" (click)="loginWithSequence()">Sequence</button>
-          <button class="form-control" style="margin-top:10px; cursor: pointer"><img src="../../assets/gicon.png" class="icon"></button>
-          <button class="form-control" style="margin-top:10px; cursor: pointer"><img src="../../assets/ficon.png" class="icon"></button>
+          <button class="form-control navBtn" style="margin-top:10px;" (click)="loginWithSequence()">Sequence</button>
+          <button class="form-control navBtn" style="margin-top:10px;"><img src="../../assets/gicon.png" class="icon"></button>
+          <button class="form-control navBtn" style="margin-top:10px;"><img src="../../assets/ficon.png" class="icon"></button>
         </div>
       </div>
     </div>
