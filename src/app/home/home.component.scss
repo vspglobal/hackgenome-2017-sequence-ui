@@ -1,9 +1,9 @@
-@import '../../vars/vars';
+@import '../../vars';
 
-.meMessage{
-  color:$orange
-}
+.insuranceTypeBtn{
+  background-color: $lightBlue;
+  color: $lightGreen;
+  border-color:$black;
+  margin-top:10px;
 
-.botMessage{
-  color:$green;
 }

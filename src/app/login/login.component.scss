@@ -1,14 +1,14 @@
-@import '../../vars/vars';
+@import "../../vars";
 
 .loginCard{
-  background-color: $blue;
+  background-color: $lightGreen;
   margin-top:100px;
-  border:2px solid $white;
-  color:$white
+  border:2px solid $black;
+  color:$lightGreen
 }
 
 .loginCardHeader{
-  background-color: $green;
+  background-color: $darkGreen;
 }
 
 .icon{
