@@ -5,8 +5,6 @@ export class Dao{
 
 
   constructor() {
-    let location = window.location.href;
-
     this.base = environment.base;
   }
 

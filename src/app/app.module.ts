@@ -22,6 +22,7 @@ import {FileDaoService} from "./files/file-dao.service";
 import { FutureComponent } from './future/future.component';
 import { LoadingComponent } from './loading/loading.component';
 import {ListServiceService} from "./list-service.service";
+import {SuggestDaoService} from "./list/suggest-dao.service";
 
 
 @NgModule({
@@ -44,7 +45,7 @@ import {ListServiceService} from "./list-service.service";
     ToastModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [OauthService, {provide: ToastOptions, useClass: CustomOption}, ListDaoService, FileDaoService, ListServiceService],
+  providers: [OauthService, {provide: ToastOptions, useClass: CustomOption}, ListDaoService, FileDaoService, ListServiceService,SuggestDaoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

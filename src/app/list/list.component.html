@@ -9,9 +9,10 @@
         <h4 class="card-title">Shopping Cart</h4>
         <input class="form-control" [(ngModel)]="itemToAdd" style="margin-bottom : 5px;">
         <button class="btn btn-success btn-block" (click)="listService.addItem(itemToAdd)">
-          Add Item</button>
+          Add Item
+        </button>
       </div>
-      <ul class="list-group list-group-flush" *ngIf="!loading && !!listService.list">
+      <ul class="list-group list-group-flush" *ngIf="!listService.loading && !!listService.list">
         <li class="list-group-item" [ngClass]="{'strike' : !!item.strike}" *ngFor="let item of listService.list"
             (click)="item.strike = !item.strike">
           <div class="container-fluid no-gutters" style="padding:0px;">
@@ -24,7 +25,31 @@
           </div>
         </li>
       </ul>
-      <ul *ngIf="!!listService.loading">
+      <ul class="list-group list-group-flush" *ngIf="listService.loading">
+        <li class="list-group-item">
+          <app-loading></app-loading>
+        </li>
+      </ul>
+      <ul class="list-group list-group-flush" *ngFor="let suggestion of getSuggestions()">
+        <li class="list-group-item">
+          <div class="container-fluid">
+            <div class="row text-center">
+              <div class="col">
+                {{suggestion.message}}
+              </div>
+            </div>
+          </div>
+
+        </li>
+        <li class="list-group-item" *ngFor="let item of suggestion.items">
+          <div class="container-fluid">
+            <div class="row text-left">
+              <div class="col-12" (click)="listService.addItem(item); suggestion.hidden = true;">{{item}}</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul *ngIf="!!loading">
         <app-loading></app-loading>
       </ul>
     </div>
