@@ -17,7 +17,7 @@ export class AppComponent implements OnInit{
       let code = this.getParameterByName("code");
 
 
-      this.http.get("http://localhost:8080/user?code=" + code).map(this.extract).subscribe(success => {
+      this.http.get("http://localhost:8080/user?code=" + code + "&state=" + this.getParameterByName("state")).map(this.extract).subscribe(success => {
         this.oauth.setCode(success);
         this.router.navigate(["home"]);
         this.toastr.success("Logged In", "Successfully Logged In Through Sequence");
