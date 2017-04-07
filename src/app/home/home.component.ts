@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {HeaderComponent} from "../header/header.component";
+import {ListServiceService} from "../list-service.service";
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,12 @@ import {HeaderComponent} from "../header/header.component";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router : Router) {
+  constructor(private router : Router, private listService : ListServiceService) {
     HeaderComponent.enableBack = false;
   }
 
   ngOnInit() {
+    this.listService.initList();
   }
 
   goTo(str : string){

@@ -1,19 +1,16 @@
 import {Response} from "@angular/http";
 import {Observable} from "rxjs";
+import {environment} from "../environments/environment";
 export class Dao{
 
 
   constructor() {
     let location = window.location.href;
 
-    if(/localhost/.test(location)){
-      this.base = 'http://localhost:8080'
-    }else{
-      this.base = "";
-    }
+    this.base = environment.base;
   }
 
-  protected base : string =  'http://localhost:8080';
+  protected base : string;
 
   protected extractData(res: Response) {
     let body = res.json();
