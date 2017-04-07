@@ -1,1 +1,16 @@
+@import "../../vars";
 
+.icon-badge{
+  height:100px;
+  padding-top:15px;
+}
+
+.icon-badge-green{
+  @extend .icon-badge;
+  background-color: $lightGreen;
+}
+
+.icon-badge-purple{
+  @extend .icon-badge;
+  background-color: $purple;
+}

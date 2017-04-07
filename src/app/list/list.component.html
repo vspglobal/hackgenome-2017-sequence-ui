@@ -14,8 +14,8 @@
             <div class="row">
               <div class="col-12">{{item.name}}</div>
             </div>
-            <div class="row warning">
-              <div class="col-12">Warning</div>
+            <div class="row warning" *ngIf="item.warning">
+              <div class="col-12">{{item.warning}}</div>
             </div>
           </div>
         </li>
