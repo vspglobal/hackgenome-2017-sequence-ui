@@ -21,6 +21,8 @@ import { HomeComponent } from './home/home.component';
 import { BadgeComponent } from './home/badge/badge.component';
 import { FilesComponent } from './files/files.component';
 import {FileDaoService} from "./files/file-dao.service";
+import { FutureComponent } from './future/future.component';
+import { LoadingComponent } from './loading/loading.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import {FileDaoService} from "./files/file-dao.service";
     AddComponent,
     HomeComponent,
     BadgeComponent,
-    FilesComponent
+    FilesComponent,
+    FutureComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

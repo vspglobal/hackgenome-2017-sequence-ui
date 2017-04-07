@@ -5,6 +5,7 @@ import {ListComponent} from "./list/list.component";
 import {AddComponent} from "./list/add/add.component";
 import {HomeComponent} from "./home/home.component";
 import {FilesComponent} from "./files/files.component";
+import {FutureComponent} from "./future/future.component";
 
 export const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -14,6 +15,10 @@ export const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'redirect', component: RedirectComponent},
   {path: 'files' , component: FilesComponent},
+  {path: 'allergies' , component: FutureComponent},
+  {path: 'calories' , component: FutureComponent},
+  {path: 'settings' , component: FutureComponent},
+
   {
     path: '**',
     redirectTo: '/home',

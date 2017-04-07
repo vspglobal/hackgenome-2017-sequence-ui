@@ -11,13 +11,16 @@ import {Router} from "@angular/router";
 export class ListComponent implements OnInit {
 
   list : {name : string}[] = [];
+  loading : boolean = true;
 
   constructor(private listDao : ListDaoService, private toast : ToastsManager, private router : Router) {
     listDao.fetch().subscribe(success => {
       this.toast.success("Retrieved Current Shopping List", "Success");
       this.list = success;
+      this.loading = false;
     }, err => {
       this.toast.error(err, "Error");
+      this.loading = false;
 
     })
   }

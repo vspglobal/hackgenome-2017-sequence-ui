@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FileDaoService} from "./file-dao.service";
 import {ToastsManager} from "ng2-toastr";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-files',
@@ -9,31 +10,28 @@ import {ToastsManager} from "ng2-toastr";
 })
 export class FilesComponent implements OnInit {
 
-  private files : {name : string, id : string, selected : boolean}[] = [];
+  private files: {name: string, id: string, selected: boolean}[] = [];
 
-  constructor(private fileDao : FileDaoService, private toast : ToastsManager) {
+  constructor(private fileDao: FileDaoService, private toast: ToastsManager, private router: Router) {
     this.initDao();
   }
 
   ngOnInit() {
   }
 
-  selectFile(file){
-    this.fileDao.selectFile(file.id).subscribe(success =>{
-      for(let f of this.files){
-        f.selected = false;
-      }
-      file.selected = true;
-    },err =>{
+  selectFile(file) {
+    this.fileDao.selectFile(file.id).subscribe(success => {
+      this.router.navigate(['home']);
+    }, err => {
       this.toast.error(err, "Error");
     })
   }
 
-  initDao(){
-    this.fileDao.getFiles().subscribe(success =>{
-      this.files =success;
+  initDao() {
+    this.fileDao.getFiles().subscribe(success => {
+      this.files = success;
       this.toast.success("Files Retrieved", "Success")
-    },err =>{
+    }, err => {
       this.toast.error(err, "Error")
     });
   }

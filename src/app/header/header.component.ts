@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public static enableBack : boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+   backEnabled(){
+    return HeaderComponent.enableBack;
   }
 
 }
