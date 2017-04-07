@@ -1,0 +1,18 @@
+@import '../../vars';
+
+.list{
+  background-color:$lightBlue;
+  opacity: .8;
+  border:1px solid $purple;
+  margin:30px;
+}
+
+.strike{
+  text-decoration: line-through;
+}
+
+.warning{
+  display: block;
+  color:orangered;
+  font-size:10px;
+}

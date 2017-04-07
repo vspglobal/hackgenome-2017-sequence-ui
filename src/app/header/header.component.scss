@@ -1,13 +1,13 @@
 @import "../../vars";
 
 .header {
-  background-color: $black;
-  border-bottom: 3px solid $lightBlue;
+  background-color: $lightBlue;
+  border-bottom: 3px solid $darkGrey;
   height: 50px;
 }
 
 .title {
-  color: $lightGreen;
+  color: $darkGrey;
   font-size: 30px;
   margin-top: 5px;
 }
