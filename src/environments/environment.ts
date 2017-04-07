@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  redirect_uri: 'http://localhost:4200/redirect',
-  client_id:'kalieki'
+  redirect_uri: 'http://localhost:4200',
+  client_id:'kaliekishop'
 
 };

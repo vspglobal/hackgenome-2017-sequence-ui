@@ -7,7 +7,9 @@
            style="max-height: 100%; max-width: 100%">
       <div class="card-block">
         <h4 class="card-title">Shopping Cart</h4>
-        <button class="btn btn-success btn-block" (click)="goToAdd()">Add Item</button>
+        <input class="form-control" [(ngModel)]="itemToAdd" style="margin-bottom : 5px;">
+        <button class="btn btn-success btn-block" (click)="addItem()"><app-loading *ngIf="!!addLoading"></app-loading>
+          <div *ngIf="!addLoading">Add Item</div></button>
       </div>
       <ul class="list-group list-group-flush" *ngIf="!loading">
         <li class="list-group-item" [ngClass]="{'strike' : !!item.strike}" *ngFor="let item of list"

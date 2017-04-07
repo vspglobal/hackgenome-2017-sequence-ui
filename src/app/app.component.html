@@ -1,4 +1,10 @@
 <div class="app" style="min-height: 100vh">
   <app-header></app-header>
-  <router-outlet></router-outlet>
+  <div *ngIf="loading">
+      <app-loading></app-loading>
+  </div>
+  <div [hidden]="loading">
+    <router-outlet></router-outlet>
+  </div>
+
 </div>
