@@ -4,6 +4,7 @@ import {Router, ActivatedRoute} from "@angular/router";
 import {Http, Response} from "@angular/http";
 import 'rxjs/Rx';
 import {ToastsManager, ToastContainer} from "ng2-toastr";
+import {environment} from "../environments/environment";
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,7 @@ export class AppComponent implements OnInit{
       let code = this.getParameterByName("code");
 
       this.loading = true;
-      this.http.get("http://localhost:8080/user?code=" + code + "&state=" + this.getParameterByName("state")).map(this.extract).subscribe(success => {
+      this.http.get(environment.base + "/user?code=" + code + "&state=" + this.getParameterByName("state")).map(this.extract).subscribe(success => {
         this.oauth.setCode(success);
         this.loading = false;
         this.router.navigate(["home"]);
