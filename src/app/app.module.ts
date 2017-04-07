@@ -20,6 +20,7 @@ import { AddComponent } from './list/add/add.component';
 import { HomeComponent } from './home/home.component';
 import { BadgeComponent } from './home/badge/badge.component';
 import { FilesComponent } from './files/files.component';
+import {FileDaoService} from "./files/file-dao.service";
 
 
 @NgModule({
@@ -42,7 +43,7 @@ import { FilesComponent } from './files/files.component';
     ToastModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [OauthService, {provide: ToastOptions, useClass: CustomOption}, ListDaoService],
+  providers: [OauthService, {provide: ToastOptions, useClass: CustomOption}, ListDaoService, FileDaoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

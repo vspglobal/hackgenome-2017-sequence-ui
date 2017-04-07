@@ -1,7 +1,5 @@
 <div class="container-fluid">
   <div class="row" *ngFor="let file of files">
-    <div class="col-12">
-        {{file | json}}
+      <app-badge style="cursor: pointer" class="col-12 pad-top" [text]="file.friendlyDesc1" icon="person" [color]="file.selected ? 'red' : 'green'" (click)="selectFile(file)"></app-badge>
     </div>
   </div>
-</div>
