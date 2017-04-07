@@ -14,3 +14,27 @@
   @extend .icon-badge;
   background-color: $purple;
 }
+
+.icon-badge-pink{
+  @extend .icon-badge;
+  background-color: $badgePink;
+}
+
+
+.icon-badge-red{
+  @extend .icon-badge;
+  background-color: $badgeRed;
+}
+
+
+.icon-badge-yellow{
+  @extend .icon-badge;
+  background-color: $badgeYellow;
+}
+
+
+.icon-badge-teal{
+  @extend .icon-badge;
+  background-color: $badgeTeal;
+}
+
