@@ -17,9 +17,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ListComponent } from './list/list.component';
 import {ListDaoService} from "./list/list-dao.service";
 import { AddComponent } from './list/add/add.component';
-import {LongPress} from "./directive/long-press";
 import { HomeComponent } from './home/home.component';
 import { BadgeComponent } from './home/badge/badge.component';
+import { FilesComponent } from './files/files.component';
 
 
 @NgModule({
@@ -30,9 +30,9 @@ import { BadgeComponent } from './home/badge/badge.component';
     RedirectComponent,
     ListComponent,
     AddComponent,
-    LongPress,
     HomeComponent,
-    BadgeComponent
+    BadgeComponent,
+    FilesComponent
   ],
   imports: [
     BrowserModule,
